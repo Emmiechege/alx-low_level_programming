@@ -14,7 +14,7 @@ int main(void)
 
 	int i;
 	
-	for (i = 97; i < 123; 1++)
+	for (i = 97; i < 123; i++)
 	
 {
 
