@@ -9,7 +9,7 @@
 
  * main - Determines if a number is positive, nagative or zero.
 
- * Rerurn: Always 0 (Succeess)
+ * Return: Always 0 (Succeess)
 
  */
 
@@ -32,11 +32,23 @@ int main(void)
 
 }
 
+else if (n == 0)
+
+
+{
+	printf("d is zero\n", n);
+
+
+
+}
+
+
 else
+
 
 {
 
-	printf("%d id negative\n", n);
+	printf("%d is negative\n", n);
 
 }
 
