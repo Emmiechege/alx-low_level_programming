@@ -1,6 +1,3 @@
-0-positive_or_neative.c
-
-
 #include <stdlib.h>
 
 #include <time.h>
