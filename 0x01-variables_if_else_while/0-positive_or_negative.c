@@ -1,27 +1,48 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-/* more headers goes there */
+0-positive_or_neative.c
 
-/* betty style doc for function main goes there */
+
+#include <stdlib.h>
+
+#include <time.h>
+
+#include <stdio.h>
+
+
+/**
+
+ * main - Determines if a number is positive, nagative or zero.
+
+ * Rerurn: Always 0 (Succeess)
+
+ */
+
 int main(void)
+
 {
 	int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n>0) 
-	{
-		printf("%d is positive/n", n);
-	}
-       	else if (n==0)
-	{
-		printf("%d is zero/n", n);
 
-	}
-	else
-	{
-		printf("%d is negative/n", n);
-	}
-	return (0);
-} 
+	srand(time(0));
+
+	n = rand() - RAND_MAX / 2;
+
+	if(n>0)
+
+{
+
+	printf("%d is positive\n", n);
+
+
+}
+
+else
+
+{
+
+	printf("%d id negative\n", n);
+
+}
+
+return (0);
+
+}
