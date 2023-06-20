@@ -23,14 +23,14 @@ int main(void)
 
 			{
 
-				Putchar(n);
+				putchar(n);
 
 				putchar(m);
 
 				if (n != 56 || m != 57)
 
 				{
-
+				
 					putchar(',');
 
 					putchar(' ');
