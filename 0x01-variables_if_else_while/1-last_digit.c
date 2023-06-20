@@ -28,7 +28,7 @@ int main(void)
 	}
 	
 	
-	else if ((n % 10) < 6 && (n % 10)! = 0)
+	else if ((n % 10) < 6 && (n % 10)!= 0)
 
 
 	{
