@@ -8,7 +8,7 @@ int main(void)
 
 {
 
-	int n, m,l;
+	int n, m, l;
 
 	for (n = 48; n < 58; n++)
 
@@ -31,8 +31,7 @@ int main(void)
 					if (n != 55 || m != 56)
 
 					{
-
-putchar(',');
+						putchar(',');
 						putchar(' ');
 
 
@@ -47,7 +46,6 @@ putchar(',');
 	}
 
 	putchar('\n');
-
 	return (0);
 
 }
