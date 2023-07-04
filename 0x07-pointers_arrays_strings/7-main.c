@@ -6,7 +6,7 @@
 *
 * Return: Always 0.
 */
-intmain(void)
+int main(void)
 {
 	char board[8][8] = {
 		{'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
