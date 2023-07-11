@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /*
- * create_array - pointer returned after malloc function
+ * create_array - creates arrays of size size and assign character c
  * @size: size of the array
  * @c: letter to be initialized
  * Return: Null if(0 or fail), Pointer if success
