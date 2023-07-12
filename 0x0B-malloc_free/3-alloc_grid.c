@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * alloc_grind - pointer to pointer to allocate grid mem
+ * alloc_grid - pointer to pointer to allocate grid mem
  * @width: the columns
  * @height: the rows
  * Return: pointer to a 2D array
