@@ -29,6 +29,17 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
+	return (a * b);
+}
+
+/**
+ * op_div - function that divides two integers
+ * @a: numerator
+ * @b: denominator
+ * Return: remainder of the division
+ */
+int op_div(int a, int b)
+{
 	if (b == 0)
 	{
 		printf("Error\n");
