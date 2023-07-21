@@ -27,10 +27,10 @@ void print_all(const char * const format, ...)
 		switch (format[n])
 		{
 		case 'c':
-			printf("%c%s", va_arg(valist, int) sep);
+			printf("%c%s", va_arg(valist, int), sep);
 			break;
 		case 'i':
-			printf("%f%s", va_arg(valist, int), sep);
+			printf("%d%s", va_arg(valist, int), sep);
 			break;
 		case 'f':
 			printf("%f%s", va_arg(valist, double), sep);
