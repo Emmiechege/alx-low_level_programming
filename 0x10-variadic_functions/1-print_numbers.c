@@ -1,4 +1,3 @@
-#include "variadic_functions"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -7,8 +6,9 @@
  * @separator: string to be printed between numbers
  * @n: number of integers passed to the function
  * ...: variable number of names to be printed
+ * Return - nothing
  */
-void print_numbers(const char *separator, const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 
@@ -20,7 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 	{
 		printf("%d", va_arg(this_list, int));
 
-		if (i != (n - 1) && separator != NULL)
+		if (i < n - 1 && separator != NULL)
 		{
 			printf("%s", separator);
 		}
