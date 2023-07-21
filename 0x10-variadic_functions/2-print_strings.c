@@ -1,11 +1,14 @@
 #include "variadic_functions.h"
+#include <stdio.h>
 #include <stdarg.h>
 /**
- * print_strings - prints strings
- * @separator: separates strings
- * @n: numbers of strings passed
- * @..: variable arguments
- * Return: nothing
+ * print_strings - prints strings.
+ * @separator: string to be printed between the strings.
+ * @n: numbers of strings passed to the function.
+ * @..: variable arguments.
+ * Desc: If separator is NULL,not ptintef
+ * if one of the strings is NUL,(nil) is printed instead.
+ * Return: nothing.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -30,11 +33,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", str);
 		}
-		if (i != (n - 1) && separator != NULL)
+		if (i != n - 1 && separator != NULL)
 		{
 			printf("%s", separator);
 		}
 	}
 	printf("\n");
-	va_end(my_list);
+	va_end(this_list);
 }
