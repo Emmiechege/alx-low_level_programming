@@ -2,10 +2,10 @@
 #include <stddef.h>
 
 /**
- * print_list - Prints the elements of a list_t list
- * @h: the pointer to the first node
+ * print_list - Prints the elements of a list_t list.
+ * @h: the pointer to the first node.
  *
- * Return: Number of nodes
+ * Return: Number of nodes.
  */
 
 size_t print_list(const list_t *h)
@@ -20,7 +20,9 @@ size_t print_list(const list_t *h)
 		}
 		else
 			printf("[0] (nil)");
+
 		node_count++;
+
 		h = h->next;
 	}
 	return (node_count);
