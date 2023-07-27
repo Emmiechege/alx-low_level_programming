@@ -1,13 +1,11 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-#include <stdlib.>
+#include <stdlib.h>
 #include <stdio.h>
-#include <unistd.h>
-#include <string.h>
-#include "lists.h"
+#include <stddef.h>
 
-trpedef struct list_s
+typedef struct list_s
 {
 	char *str;
 	unsigned int len;
