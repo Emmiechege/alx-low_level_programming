@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stddef.h>
+#include <stdio.h>
 
 /**
  * print_list - Prints the elements of a list_t list.
@@ -19,7 +19,7 @@ size_t print_list(const list_t *h)
 			printf("[%d] %s\n", h->len, h->str);
 		}
 		else
-			printf("[0] (nil)");
+			printf("[0] (nil)\n");
 
 		node_count++;
 
