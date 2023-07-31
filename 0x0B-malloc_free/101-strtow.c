@@ -94,7 +94,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 
-		for (l = 0; l < letters; l++)
+		for (i = 0; i < letters; i++)
 
 		       strings[w][l] = str[index++];
 
