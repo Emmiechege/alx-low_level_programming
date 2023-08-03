@@ -50,6 +50,7 @@ int check_palindrome(char *s, int len, int index)
  * Return: if a string is a palindrome, 1.
  * if the string is not a palindrome 0.
  */
+
 int is_palindrome(char *s)
 {
 	int index = 0;
