@@ -32,15 +32,8 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (index1 = 0; s1[index1] != '\0'; index1++)
-		{
-			result[index1] = s1[index1];
-		}
-		for (index2 = 0; s2[index2] != '\0'; index2++)
-		{
-			result[index1 + index2] = s2[index2];
-		}
-		result[index1 + index2] = '\0';
+		strcpy(result, s1);
+		strcat(result, s2);
 	}
 	return (result);
 	free(result);
