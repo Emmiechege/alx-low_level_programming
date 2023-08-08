@@ -11,7 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	 char *arr; /* the character pointer */
-        unsigned int i; /* the loop iterator */
+	 unsigned int i; /* the loop iterator */
 
 	if (size == 0)
 		/* if the size is zero, return a null pointer */
@@ -31,7 +31,6 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	free(arr);
 	return (arr);
 	/* if the program runs succesfully, return a pointer to the array */
 }
