@@ -21,17 +21,17 @@ char *create_array(unsigned int size, char c)
 
 	arr = malloc(sizeof(char) * size);/* allocating memory */
 
-	for (i = 0; i < size; i++)
-	{
-		arr[i] = c; /* initializing each element with a specific character */
-		/* iterate through the elements until i reaches the size of the array */
-	}
 	if (arr == NULL)
 		/* if the program fails return a null pointer */
 	{
 		return (NULL);
 	}
+
+	for (i = 0; i < size; i++)
+	{
+		arr[i] = c; /* initializing each element with a specific character */
+		/* iterate through the elements until i reaches the size of the array */
+	}
 	return (arr);
 	/* if the program runs succesfully, return a pointer to the array */
 }
-
