@@ -31,8 +31,8 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
+	free(arr);
 	return (arr);
 	/* if the program runs succesfully, return a pointer to the array */
-	free(arr);
 }
 
