@@ -11,7 +11,6 @@ char *str_concat(char *s1, char *s2)
 {
 	int length = 0; /*stores length of concatenated string */
 	char *result; /* pointer to newly allocated memory */
-	int index1, index2; /* loop counters */
 
 	if (s1 == NULL)
 	/*returns an empty string if the string is null */
