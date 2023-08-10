@@ -13,50 +13,41 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *result;
-	unsigned int len_s1;
-	unsigned int len_s2;
-	unsigned int total_length;
+	unsigned int len = 0, index;
+	char *new_str;
 
-/* treat null as an empty string */
+	/* if string s1 and s2 are NULL return empty string */
 	if (s1 == NULL)
 	{
-		s1 = " ";
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = " ";
+		s2 = "";
 	}
-	
-/* calculate lengths of s1 and s2 */
-	len_s1 = strlen(s1);
-	len_s2 = strlen(s2);
-
-/* adjust n if its greater or equal to the length of s2 */
-
-	if (n >= len_s2)
+	for (index = 0; s1[index] != '\0'; index++)
 	{
-		n = len_s2;
+		len++;
 	}
+	/* Dynamically allocate memory for the new string */
+	new_str = malloc(sizeof(char) * (len + 1));
 
-/* calculate the total length of the concatenated string */
-/* the 1 is the null terminator */
-	total_length = len_s1 + n + 1;
-
-/* allocate memory for the concatenated string */
-	result = malloc(total_length);
-
-/* if the allocation failed */
-	if (result == NULL)
+	/* Check if returned pointer by malloc is NULL or not */
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
+	len = 0;
 
-/* copy s1 to the result */
-	strcpy(result, s1);
-
-/* Concatenates the first n characters of s2 */
-	strncat(result, s2, n);
-
-	return (result);
+	for (index = 0; s1[index]; index++)
+	{
+		new_str[len++] = s1[index];
+	}
+	for (index = 0; s2[index] && index < n; index++)
+	{
+		new_str[len++] = s2[index];
+	}
+	new_str[len] = '\0';
+	return (new_str);
 }
+
