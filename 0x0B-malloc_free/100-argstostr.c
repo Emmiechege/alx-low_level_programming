@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,7 +23,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		/* the arguments plus the newline character */
-		total_length = strlen(av[i]) + 1;
+		total_length += strlen(av[i]) + 1;
 	}
 
 	/* allocate memory for the concatenated string */
@@ -39,7 +40,7 @@ char *argstostr(int ac, char **av)
 		strcpy(concat_str + cur_position, av[i]);
 
 		/* move the cursor to the end of the copied argument */
-		cur_position = strlen(av[1]);
+		cur_position += strlen(av[i]);
 
 		/* add a newline after the copied argument */
 		concat_str[cur_position] = '\n';
