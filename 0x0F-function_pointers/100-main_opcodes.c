@@ -21,7 +21,7 @@ void print_opcodes(char *a, int n)
 			printf(" ");
 		}
 	}
-	printf("/n");
+	printf("\n");
 }
 /**
  * main - prints the opcode of its own main function
