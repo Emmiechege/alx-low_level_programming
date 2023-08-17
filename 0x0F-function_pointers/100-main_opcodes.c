@@ -7,6 +7,7 @@
  * @n: the number of bytes to print.
  * Return: void
  */
+
 void print_opcodes(char *a, int n)
 {
 	int i;
