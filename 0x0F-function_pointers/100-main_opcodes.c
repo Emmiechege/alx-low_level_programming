@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "function_pointers.h"
 
 /**
  * print_opcodes - print the opcodes of this program.
@@ -39,6 +38,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	n = atoi(argv[1]);
+
 	if (n < 0)
 	{
 		printf("Error\n");
