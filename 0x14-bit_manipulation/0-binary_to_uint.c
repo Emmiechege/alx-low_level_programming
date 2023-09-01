@@ -28,9 +28,10 @@ unsigned int binary_to_uint(const char *b)
 		{
 			/* convert the binary digits to its decimal and convert the char to int*/
 			sum_dec = sum_dec * 2 + (*b - '0');
-			b++; /* move to next character in string */
+			b++;
+			/* move to next character in string */
 		}
 	}
 
-	return sum_dec;
+	return (sum_dec);
 }
