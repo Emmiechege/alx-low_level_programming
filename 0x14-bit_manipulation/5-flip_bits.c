@@ -15,7 +15,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	xor_op_result = n ^ m; /*perfom XOR operation to find differing bits */
 
-	while (xor_op_result )
+	while (xor_op_result)
 	{
 		bit_count += xor_op_result & 1; /*add least signficant bit to count*/
 
