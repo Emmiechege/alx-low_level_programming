@@ -46,9 +46,8 @@ void close_file(int fd)
  * main - copies contents of a file to another file
  * @argc: Number of arguments
  * @argv: Arguments vector
- *
  * Return: Always 0, success 1
- * Description:
+ *
  * if arg count is incorrect, exit code 97
  * if file_from does not exist or cannot be read, exit code 98
  * if file_to cannot be created or written to, exit code 99
@@ -79,6 +78,7 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
+
 		w = write(file_to, buffer, r);
 		if (file_to == -1 || w == -1)
 		{
@@ -88,8 +88,8 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-			r = read(file_from, buffer, 1024);
-				file_to = open(argv[2], O_WRONLY | O_APPEND);
+		r = read(file_from, buffer, 1024);
+		file_to = open(argv[2], O_WRONLY | O_APPEND);
 	} while (r > 0);
 
 	free(buffer);
