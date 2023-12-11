@@ -59,6 +59,6 @@ Our mole will be only able to run two commands from a shell script, without bein
 * Our mole will run your shell script this way: `mss@gm_server$ . ./101-make_me_win.sh`
 * Our mole will run your shell script from the same directory containing the program `gm`, exactly 98 seconds before MSS runs gm with my numbers: `./gm 9 8 10 24 75 9`
 * MSS will use the same terminal and session than our mole
-Before running the gm program, MSS always check the content of the directory
-MSS always exit after running the program gm
-TL;DR; This is what is going to happen
+* Before running the `gm` program, MSS always check the content of the directory
+* MSS always exit after running the program `gm`
+* TL;DR; This is what is going to happen
