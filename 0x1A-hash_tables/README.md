@@ -9,6 +9,7 @@ What are the advantages and drawbacks of using hash tables
 What are the most common use cases of hash tables
 
 ## Tasks
+
 ### 0. >>> ht = {}
 Write a function that creates a hash table.
 * Prototype: `hash_table_t *hash_table_create(unsigned long int size);`
