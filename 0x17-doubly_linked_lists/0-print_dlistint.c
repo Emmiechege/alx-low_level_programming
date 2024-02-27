@@ -1,18 +1,26 @@
 #include "lists.h"
+
 /**
- * print_dlistint - prints elements of a doubly linked list
- * @h: pointer to the head node
- * Return: the number of nodes
+ * print_dlistint - func printing all elements of dlistint_int list
+ * @h: head pointer
+ *
+ * Return: Number of elements in the list
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t idx = 0;
+	const dlistint_t *tmp = NULL;
+	int count;
 
-	while (h != NULL)
+	tmp = h;
+
+	count = 0;
+
+	while (tmp)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		idx++;
+		count++;
+		printf("%d\n", tmp->n);
+		tmp = tmp->next;
 	}
-	return (idx);
+
+	return (count);
 }

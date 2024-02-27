@@ -1,17 +1,25 @@
 #include "lists.h"
+
 /**
- * dlistint_len - prints the number of elements in a dlinked list
- * @h: pointer to the head node
- * Return: numbers of elements of dlinked list
+ * dlistint_len - func to print number of elements in a list
+ * @h: head pointer
+ *
+ * Return: number of elements
  */
+
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t idx = 0;
+	const dlistint_t *tmp;
+	int count;
 
-	while (h != 0)
+	tmp = h;
+
+	count = 0;
+
+	while (tmp)
 	{
-		idx++;
-		h = h->next;
+		count++;
+		tmp = tmp->next;
 	}
-	return (idx);
+	return (count);
 }

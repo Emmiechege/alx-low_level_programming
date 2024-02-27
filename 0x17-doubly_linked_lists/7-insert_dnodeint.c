@@ -1,37 +1,54 @@
 #include "lists.h"
+
 /**
- * insert_dnodeint_at_index - inserts a new node at a given position
- * @h: Double pointer to the head node
- * @n: Double pointer to the head node
- * @idx: index of the list where the new node should be added, idx = 0
- * @n: data to put in the new node
- * Return: the address of the  new node at index idx, NULLIFY failure
+ * insert_dnodeint_at_index - inserts newnode at a given index
+ * @h: pointer to pointer head
+ * @idx: index at which to insert newnode
+ * @n: data to store in the newnode
+ *
+ * Return: address of newnode; null if fails
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *freshnode;
-	dlistint_t *temp_holder = *h;
-	unsigned int v = 0; /*counter*/
+	dlistint_t *tmp, *newnode;
+	unsigned int i;
 
-	if (idx == 0)
-		return (add_dnodeint(h, n));
-	while (temp_holder && v < idx - 1)
+	if (!h)
 	{
-		temp_holder = temp_holder->next;
-		v++;
+		return (NULL);
 	}
-	if (!temp_holder)
-		return (NULL);
-	if (!temp_holder->next) /*insert nod at the end of the list*/
-		return (add_dnodeint_end(h, n));
-	freshnode = malloc(sizeof(dlistint_t));
-	if (freshnode == NULL)
-		return (NULL);
-	freshnode->n = n;
-	freshnode->next = temp_holder->next;
-	freshnode->prev = temp_holder;
-	temp_holder->next->prev = freshnode;
-	temp_holder->next = freshnode;
+	if (idx == 0)
+	{
+		return (add_dnodeint(h, n));
+	}
+	else
+	{
+		tmp = *h;
+		i = 1;
+		while (i < idx && tmp)
+		{
+			tmp = tmp->next;
+			i++;
+		}
+		if (tmp == NULL && i == idx)
+			return (add_dnodeint_end(h, n));
+		else if (tmp)
+		{
+			newnode = malloc(sizeof(dlistint_t));
+			if (!newnode)
+				return (NULL);
+			newnode->n = n;
+			newnode->next = NULL;
+			newnode->prev = NULL;
+			newnode->next = tmp->next;
+			newnode->prev = tmp;
+			if (tmp->next != NULL)
+				tmp->next->prev = newnode;
+			tmp->next = newnode;
 
-	return (freshnode);
+			return (newnode);
+		}
+		return (NULL);
+	}
 }
